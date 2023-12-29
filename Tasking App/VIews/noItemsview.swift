@@ -14,6 +14,11 @@ struct noItemsview: View {
     var body: some View {
         ScrollView{
             VStack (spacing: 10){
+                
+                Image("cat2")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+
                 Text("There are no Items!")
                     .font(.title)
                     .fontWeight(.semibold)

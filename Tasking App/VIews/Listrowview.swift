@@ -13,13 +13,18 @@ struct ListRowView: View {
     
     var body: some View {
         HStack{
-            Image(systemName: item.isCompeletd ? "checkmark.circle" :"circle")
-                .foregroundColor( item.isCompeletd ? .green: .red)
-            Text(item.title)
+                    Image(systemName: item.isCompeletd ? "checkmark.circle" :"circle")
+                        .foregroundColor( item.isCompeletd ? .green: .red)
+                    Text(item.title)
             Spacer()
+           
         }
         .font(.title2)
-        .padding(.vertical, 8)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 20)
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .shadow(radius: 10)
     }
 }
 
