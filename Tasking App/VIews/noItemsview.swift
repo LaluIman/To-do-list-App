@@ -15,56 +15,37 @@ struct noItemsview: View {
         ScrollView{
             VStack (spacing: 10){
                 
-                Image("cat2")
+                Image("sloth")
                     .resizable()
-                    .frame(width: 300, height: 300)
+                    .frame(width: 350, height: 350)
 
-                Text("There are no Items!")
+                Text("There are no items!")
                     .font(.title)
                     .fontWeight(.semibold)
-                Text("Are you a Productive Person? i think you should click the ADD button to add a bunch of items to your to do list" )
+                Text("maybe you should add an item so are not lazy like the sloth above." )
                     .padding(.bottom, 20)
                 NavigationLink(
                     destination: Addview(),
                     label: {
-                        Text("Add Items 🥳")
+                        Text("Add Items ")
                             .foregroundStyle(.white)
                             .font(.headline)
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
-                            .background(animate ? Color.green : Color.accentColor)
+                            .background(.blue)
                             .cornerRadius(10)
                         
                     })
-                .padding(.horizontal, animate ? 30 : 50)
-                .shadow(
-                    color: animate ? Color.green.opacity(0.7):
-                        Color.accentColor.opacity(0.7),
-                    radius: animate ? 20 : 10,
-                    x: 0,
-                    y: animate ? 30 : 20)
-                .scaleEffect(animate ? 1.1 : 1.0 )
-                .offset(y:animate ? -7 : 0)
+                
+                
             }
             .frame(maxWidth: 400)
             .multilineTextAlignment(.center)
             .padding(40)
-            .onAppear(perform: addAnimation)
+            .offset( y: -50)
+           
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-    
-    func addAnimation(){
-        guard !animate else {return}
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
-            withAnimation(
-                Animation
-                    .easeInOut(duration: 2.0)
-                    .repeatForever()
-            ){
-                animate.toggle()
-            }
-        }
     }
     
 }

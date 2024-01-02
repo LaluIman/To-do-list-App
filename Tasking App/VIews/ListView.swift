@@ -38,7 +38,16 @@ struct ListView: View {
         .navigationBarItems(
             leading: EditButton(),
             trailing:
-                NavigationLink("Add" , destination: Addview())
+                NavigationLink("+" , destination: Addview())
+                .foregroundColor(.white)
+                .font(.system(size: 40))
+                .padding()
+                .background(
+                    Circle()
+                        .fill(Color.blue)
+                        .frame(width: 40, height: 40)
+                        .offset(x: 3.5, y: 3)
+                )
         )
     }
     
