@@ -1,1 +1,1 @@
-![Mockup 1](https://github.com/Eye-Mans/To-do-list-App/assets/140592472/b6660d1b-5b52-4254-a889-429d1e89a0ca)
+![Mockup 3](https://github.com/Eye-Mans/To-do-list-App/assets/140592472/56d759d6-8b91-403f-a305-832cedb0121a)
