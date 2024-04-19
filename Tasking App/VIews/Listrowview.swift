@@ -24,7 +24,8 @@ struct ListRowView: View {
         .padding(.vertical, 20)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-        .shadow(radius: 10)
+        .shadow(radius: 1)
+        .shadow(radius: 2, x: 5, y: 4)
     }
 }
 

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Tasking_App
+@testable import To_do_List
 
 final class Tasking_AppTests: XCTestCase {
 

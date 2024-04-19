@@ -26,17 +26,14 @@ struct ListView: View {
                             }
                     }
                     .onDelete(perform: ListViewModel.deleteItem)
-                    .onMove(perform: ListViewModel.moveItem)
                 }
-                .listStyle(PlainListStyle())
+                .listStyle(.plain)
+                .listRowSeparator(.hidden)
+                .listRowSeparatorTint(.white.opacity(0))
             }
         }
-        
-        
-        
         .navigationTitle("To Do List 📝")
         .navigationBarItems(
-            leading: EditButton(),
             trailing:
                 NavigationLink("+" , destination: Addview())
                 .foregroundColor(.white)
@@ -50,7 +47,7 @@ struct ListView: View {
                 )
         )
     }
-    
+
     
 }
 
